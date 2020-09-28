@@ -1,0 +1,31 @@
+from recognize_video_func import *
+from omniwheel.motor import *
+from self_serving import *
+from delivery import *
+
+
+setupult()
+setup()
+
+
+#start GUI
+while (True):
+    ID = face_login()  #login function
+    print(ID)
+
+    #select mode GUI
+    #if self_serving
+    self_serving()
+    #if delivery mode
+    delivery()
+    
+    
+    
+    
+    
+    
+    key = cv2.waitKey(1) & 0xFF
+    # if the `q` key was pressed, break from the loop
+    if key == ord("q"):
+        print("quit")
+        break
